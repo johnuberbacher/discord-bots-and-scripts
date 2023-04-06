@@ -32,7 +32,7 @@ async def send_message(message):
 async def on_ready():
     print(f"{client.user.name} is ready.")
 
-# Set up a loop to check for new repositories every 3 hours (10800 seconds)
+# Set up a loop to check for new repositories every minute
 @client.event
 async def on_ready():
     current_repo = ""
@@ -45,7 +45,7 @@ async def on_ready():
             current_repo = latest_repo
             await send_message(f"{github_user} just published a new repository: \n{latest_repo}")
             print(f"{current_repo} is now the latest repo.")
-        await asyncio.sleep(10800)
+        await asyncio.sleep(60)
 
 # Start the Discord bot
 client.run(bot_token)
