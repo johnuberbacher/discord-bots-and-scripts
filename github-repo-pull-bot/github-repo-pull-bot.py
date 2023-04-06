@@ -43,7 +43,7 @@ async def on_ready():
             print(f"{current_repo} is the current repo.")
             print(f"{latest_repo} is the latest repo.")
             current_repo = latest_repo
-            await send_message(f"GitHub user:{github_user} just published a new repository: \n{latest_repo}")
+            await send_message(f"{github_user} just published a new repository: \n{latest_repo}")
             print(f"{current_repo} is now the latest repo.")
         await asyncio.sleep(10800)
 
