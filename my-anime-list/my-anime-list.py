@@ -42,6 +42,7 @@ async def send_random_anime():
     page_url = anime['page_url']
 
     await client.get_channel(anime_channel_id).send(f"The random anime of the day is... \n\n**{title}** \n\nIt currently sits with an average score of **⭐{score}** on MAL. \n\n**What do YOU think about {title}?** \nHave you seen it? Is it on any of your lists? Why or why not?")
+    print(f"The random anime of the day is... \n\n**{title}** \n\nIt currently sits with an average score of **⭐{score}** on MAL. \n\n**What do YOU think about {title}?** \nHave you seen it? Is it on any of your lists? Why or why not?")
     
     await client.get_channel(anime_channel_id).send(f"_ _\n{page_url}")
     
@@ -58,6 +59,7 @@ async def scheduled_task():
         # Calculate the number of seconds until the next run
         seconds_until_next_run = (next_run - now).total_seconds()
         # Sleep until the next run
+        print(f'Sleeping...')
         await asyncio.sleep(seconds_until_next_run)
         # Run the task
         await send_random_anime()
