@@ -43,7 +43,7 @@ async def send_random_anime():
 
     await client.get_channel(anime_channel_id).send(f"The random anime of the day is... \n\n**{title}** \n\nIt currently sits with an average score of **⭐{score}** on MAL. \n\n**What do YOU think about {title}?** \nHave you seen it? Is it on any of your lists? Why or why not?")
     print(f"The random anime of the day is... \n\n**{title}** \n\nIt currently sits with an average score of **⭐{score}** on MAL. \n\n**What do YOU think about {title}?** \nHave you seen it? Is it on any of your lists? Why or why not?")
-    
+
     await client.get_channel(anime_channel_id).send(f"_ _\n{page_url}")
     
 # Define a task to run the send_random_anime function every day at 8:00am Mountain Time
@@ -51,8 +51,8 @@ async def scheduled_task():
     while True:
         # Get the current time in Mountain Time
         now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-7)))
-        # Calculate the time for the next run at 8:00am Mountain Time
-        next_run = datetime.datetime(now.year, now.month, now.day, 8, 0, tzinfo=now.tzinfo)
+        # Calculate the time for the next run at 9:30am Mountain Time
+        next_run = datetime.datetime(now.year, now.month, now.day, 9, 30, tzinfo=now.tzinfo)
         if next_run < now:
             # The next run time has already passed today, so schedule for tomorrow
             next_run += datetime.timedelta(days=1)
@@ -62,6 +62,7 @@ async def scheduled_task():
         print(f'Sleeping...')
         await asyncio.sleep(seconds_until_next_run)
         # Run the task
+        print(f'Looking for anime...')
         await send_random_anime()
 
 # Start the scheduled task when the bot is ready
