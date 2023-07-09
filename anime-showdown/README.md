@@ -1,24 +1,43 @@
 ## Anime Showdown Bot
 
-This Discord bot creates anime showdowns by randomly selecting two top anime characters and allowing users to vote for their favorite.
+This is a Discord bot written in Python that generates an anime showdown between two randomly selected characters and allows users to vote for their favorite character. The bot uses the Jikan API to fetch the top anime characters, creates a collage image of the two characters, and posts it in a specified Discord channel. After a specified voting duration, the bot calculates the vote counts and percentages and announces the results.
 
-- Fetches the top anime characters from the Jikan API.
-- Selects two random characters for the showdown.
-- Generates an image with the characters' images and names.
-- Sends the image and a voting poll to the designated anime channel.
-- Calculates the voting results after a specified duration.
-- Displays the final voting results and percentage of votes for each character.
+### Prerequisites
+Before running the bot, make sure you have the following prerequisites installed:
+- Python 3.x
+- discord.py library
+- requests library
+- Pillow library
+
+You will also need to create a Discord bot and obtain its token. Follow these steps:
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+2. Click on "New Application" and enter a name for your bot.
+3. Go to the "Bot" tab and click on "Add Bot".
+4. Copy the bot token.
+
 
 ### Setup
-- Install the required dependencies:
-- Obtain a bot token from the Discord Developer Portal.
-- Create a config.py file in the same directory as the code with the following content:
+1. Clone or download the repository to your local machine.
+2. Install the required libraries by running the following command in your terminal:
 ```
-movie_channel_id = YOUR_ANIME_CHANNEL_ID
-bot_token = 'YOUR_BOT_TOKEN'
+pip install discord.py requests Pillow
 ```
-- Replace YOUR_ANIME_CHANNEL_ID with the ID of your movie channel and 'YOUR_BOT_TOKEN' with the obtained bot token.
-- Run the script: 
+3. Replace the placeholders in the config.py file with your Discord channel ID and bot token:
+```
+anime_channel_id = YOUR_ANIME_CHANNEL_ID
+bot_token = YOUR_BOT_TOKEN
+```
+4. Run the script: 
 ```
 python script.py
 ```
+
+### How it Works
+1. The bot fetches the top anime characters from the Jikan API, limited to the specified number of characters (characters_to_fetch).
+2. Two random characters are selected from the fetched list.
+3. The bot creates a collage image (showdown.jpg) by combining the images of the two characters.
+4. The character names are added to the bottom of each square in the collage image.
+5. The bot sends a message in the specified Discord channel, attaching the collage image and starting a poll.
+6. Users can vote for their favorite character by reacting to the poll message with a blue circle emoji (🔵) or a red circle emoji (🔴).
+7. After the voting duration (voting_duration), the bot calculates the vote counts and percentages.
+8. The bot announces the voting results in the Discord channel and exits.
