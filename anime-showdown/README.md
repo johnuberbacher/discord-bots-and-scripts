@@ -18,5 +18,7 @@ movie_channel_id = YOUR_ANIME_CHANNEL_ID
 bot_token = 'YOUR_BOT_TOKEN'
 ```
 - Replace YOUR_ANIME_CHANNEL_ID with the ID of your movie channel and 'YOUR_BOT_TOKEN' with the obtained bot token.
-- Run the code: 
-`python script.py`
+- Run the script: 
+```
+python script.py
+```
