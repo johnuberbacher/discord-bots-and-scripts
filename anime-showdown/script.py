@@ -9,7 +9,7 @@ from config import anime_channel_id, bot_token
 from discord.ext import commands
 
 characters_to_fetch = 100 # fetch the top 100 characters from the api
-voting_duration = 10800s # 10800s ~ 3 hours
+voting_duration = 10800 # 10800s ~ 3 hours
 
 # Set up the Discord client
 intents = discord.Intents.default()
