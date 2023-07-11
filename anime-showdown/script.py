@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 from config import anime_channel_id, bot_token
 from discord.ext import commands
 
-characters_to_fetch = 100 # fetch the top 100 characters from the api
+characters_to_fetch = 50 # fetch the top 50 characters from the api
 voting_duration = 10800 # 10800s ~ 3 hours
 
 # Set up the Discord client
@@ -146,7 +146,7 @@ async def send_random_anime(channel, anime_list):
 
     # Fetch the updated poll message
     updated_poll_message = await channel.fetch_message(poll_message.id)
-
+ 
     # Get the vote counts for each option
     blue_count = 0
     red_count = 0
@@ -163,11 +163,11 @@ async def send_random_anime(channel, anime_list):
     red_percentage = (red_count / total_votes) * 100 if total_votes > 0 else 0
 
   
-    # Send the voting results
-    async for message in channel.history(limit=1):
-        if message.author == client.user:
-            await message.delete()
-                
+    # async for message in channel.history(limit=1):
+    #     if message.author == client.user:
+    #        await message.delete()
+       
+    # Send the voting results         
     await channel.send(f"🔥 Voting has ended! 🔥 \n\nHere are the results:\n\n🔵 {character1_name}: {blue_count} votes ({blue_percentage:.2f}%)\n🔴 **{character2_name}: {red_count} votes ({red_percentage:.2f}%)**")
     await client.close()
     await quit()

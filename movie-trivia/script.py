@@ -30,6 +30,8 @@ async def get_trivia():
 
         channel = client.get_channel(movie_channel_id)
         await channel.send(message)
+        await client.close()
+        await quit()
     else:
         print("Request failed with status code:", response.status_code)
 
