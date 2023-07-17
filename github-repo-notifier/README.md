@@ -41,3 +41,6 @@ python script.py
 6. If a repository was created within the last 24 hours, the bot generates a message with the repository details and sends it to the specified Discord channel.
 7. If no new repositories are found for a user or the request fails, the bot logs the corresponding message.
 8. After processing all the GitHub usernames, the bot closes the Discord client.
+
+### Example
+![](https://i.imgur.com/BFT4K1V.png)

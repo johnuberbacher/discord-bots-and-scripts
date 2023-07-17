@@ -30,3 +30,6 @@ python script.py
 6. The constructed message is sent to the designated movie channel using the channel.send() method.
 7. If the API request fails, an error message is printed to the console.
 8. The bot continues to run, listening for events and responding to commands
+
+### Example
+![](https://i.imgur.com/akmkSuD.png)

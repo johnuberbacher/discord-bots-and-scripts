@@ -41,3 +41,7 @@ python script.py
 6. Users can vote for their favorite character by reacting to the poll message with a blue circle emoji (🔵) or a red circle emoji (🔴).
 7. After the voting duration (voting_duration), the bot calculates the vote counts and percentages.
 8. The bot announces the voting results in the Discord channel and exits.
+
+### Example
+![](https://i.imgur.com/SV3jV4M.png)
+![](https://i.imgur.com/mrRrNa9.png)
