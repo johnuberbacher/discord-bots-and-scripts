@@ -1,14 +1,12 @@
 import discord
 import requests
 import random
-from greetings import greetings
 from bs4 import BeautifulSoup
 from prettytable import PrettyTable
 from tabulate import tabulate
 import asyncio
 import time
 import sys
-sys.path.append('..')
 from config import game_sales_channel_id, bot_token
 
 # Set up the Discord client
@@ -17,6 +15,20 @@ intents.members = True
 
 # Create a Discord client
 client = discord.Client(intents=intents)
+
+num_games = 10
+greetings = [
+    "Rise and shine, you scrumptious muffins!",
+    "Good morning, you bunch of wildflowers!",
+    "Wakey wakey, pancakes and bacon!",
+    "Greetings, you fearless explorers!",
+    "Hey there, you funky monkeys!",
+    "Rise and shine, my little donut holes!",
+    "Good morning, you lovely bunch of coconuts!",
+    "Wakey wakey, eggs and bakey!",
+    "Greetings, my fellow adventurers!",
+    "Hey there, you crazy cats and kittens!"
+]
 
 # Function to scape top Steam sale games
 def get_top_steam_sale_games(num_games):
@@ -40,12 +52,15 @@ def get_top_steam_sale_games(num_games):
         name = game.find("span", class_="title").text.strip()
 
         # Get the game sale price and original price
-        price_div = game.find("div", class_="col search_price_discount_combined responsive_secondrow")
+        price_div = game.find("div", class_="search_price_discount_combined")
         if price_div.find_all("div"):
-            sale_price = price_div.find_all("div", class_="col search_price discounted responsive_secondrow")[0].text.strip()
-            sale_amount = price_div.find_all("div", class_="col search_discount responsive_secondrow")[0].text.strip()
-            truncated_sale_price = sale_price.index("$", sale_price.index("$") + 1)
-            sale_price = sale_price[truncated_sale_price+1:]
+            
+            sale_price = price_div.find_all("div", class_="discount_final_price")[0].text.strip()
+            sale_amount = price_div.find_all("div", class_="discount_pct")[0].text.strip()
+            print(sale_price)
+            # truncated_sale_price = sale_price.index("$", sale_price.index("$") + 1)
+            #truncated_sale_price = sale_price
+            #sale_price = sale_price[truncated_sale_price+1:]
         else:
             sale_price = "N/A"
             sale_amount = "N/A"
@@ -58,7 +73,8 @@ def get_top_steam_sale_games(num_games):
             review_pct = "N/A"
 
         # Append the game information to the list
-        games_info.append([name, sale_amount, sale_price, review_pct])
+        # games_info.append([name, sale_amount, sale_price, review_pct])
+        games_info.append([name, sale_amount, sale_price])
 
     return games_info
 
@@ -104,29 +120,26 @@ def get_top_switch_sale_games(num_games):
         games_info.append([name, discount_pct, sale_price, original_price])
 
     return games_info
-
+ 
 @client.event
 async def on_ready():
     print("Bot is ready")
     channel = client.get_channel(game_sales_channel_id)
-    num_games = 10
-    while True:
-        # Get a random greeting
-        greeting = random.choice(greetings)
+    # Get a random greeting
+    greeting = random.choice(greetings)
 
-        # Get the top sale games
-        top_steam_sale_games = get_top_steam_sale_games(num_games)
-        top_switch_sale_games = get_top_switch_sale_games(num_games)
+    # Get the top sale games
+    top_steam_sale_games = get_top_steam_sale_games(num_games)
+    top_switch_sale_games = get_top_switch_sale_games(num_games)
 
-        # Convert the list of games info into an ASCII table
-        steamTable = tabulate(top_steam_sale_games, headers=["Name", "Discount", "Sale Price", "Review Average"])
-        switchTable = tabulate(top_switch_sale_games, headers=["Name", "Discount", "Sale Price", "Review Score"])
+    # Convert the list of games info into an ASCII table
+    steamTable = tabulate(top_steam_sale_games, headers=["Name", "Discount", "Sale Price"])
+    # switchTable = tabulate(top_switch_sale_games, headers=["Name", "Discount", "Sale Price", "Review Score"])
 
-        # Send the greeting and the table in a Discord message
-        await channel.send(f"{greeting} \n\nHere's the top {num_games} Steam games on sale right now:\n```\n{steamTable}\n-------------------------------------------------\nhttps://store.steampowered.com/search/?specials=1```\n\n")
-        await channel.send(f"_ _\nAnd here's the top {num_games} Switch games on sale within the Nintendo eShop:\n```\n{switchTable}\n-------------------------------------------------\nhttps://www.dekudeals.com/games?sales=1```")
+    # Send the greeting and the table in a Discord message
+    await channel.send(f"{greeting} \n\nHere are the top {num_games} Steam games on sale right now!\n```\n{steamTable}\n-------------------------------------------------\nhttps://store.steampowered.com/search/?specials=1```\n\n")
+    # await channel.send(f"_ _\nAnd here's the top {num_games} Switch games on sale (sorted by Popularity):\n```\n{switchTable}\n-------------------------------------------------\nhttps://www.dekudeals.com/games?sales=1```")
 
-        # Wait for 24 hours before repeating the loop
-        time.sleep(86400)
+    await client.close()
 
 client.run(bot_token)
