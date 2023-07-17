@@ -26,3 +26,6 @@ python script.py
 2. It retrieves the specified Discord channel and selects a random greeting.
 3. The bot formats the game sales data into ASCII tables.
 4. A Discord message is sent with the greeting and the top sale games' table, including URLs for more details.
+
+### Example
+![](https://i.imgur.com/ECqvENi.png)
