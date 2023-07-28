@@ -1,5 +1,7 @@
 # Discord Python Scripts and Bots
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
+
 This repository contains a collection of various scripts and bots written in Python, designed specifically for use in a Discord server. These scripts and bots can enhance your server's functionality, automate tasks, and provide a better experience for your community. If you want to schedule these tasks to run automatically at specific times, you can use the program [Task Till Dawn](https://www.oliver-matuschin.de/en/projects/task-till-dawn), available on both Windows and macOS.
 
 ## Getting Started

@@ -1,5 +1,7 @@
 ## GitHub Updates Bot
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
+
 This is a Discord bot written in Python that checks for recent repository creations by specified GitHub users and sends notifications to a specified Discord channel. The bot utilizes the GitHub API to fetch the repositories and their details.
 
 ### Prerequisites

@@ -1,5 +1,7 @@
 ## Anime Showdown Bot
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
+
 This is a Discord bot written in Python that generates an anime showdown between two randomly selected characters and allows users to vote for their favorite character. The bot uses the Jikan API to fetch the top anime characters, creates a collage image of the two characters, and posts it in a specified Discord channel. After a specified voting duration, the bot calculates the vote counts and percentages and announces the results.
 
 ### Prerequisites
