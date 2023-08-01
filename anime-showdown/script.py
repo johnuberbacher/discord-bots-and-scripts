@@ -18,7 +18,7 @@ intents.members = True
 # Create a Discord client
 client = discord.Client(intents=intents)
 
-def fetch_top_anime_characters():
+def fetch_top_anime_characters(ignore_list=None):
     url = "https://api.jikan.moe/v4/top/characters"
     params = {
         "type": "anime"
@@ -31,13 +31,22 @@ def fetch_top_anime_characters():
         response = requests.get(url, params=params)
         response.raise_for_status()
         data = response.json()
-        characters.extend(data["data"])
+        for character in data["data"]:
+            if ignore_list and character["name"] in ignore_list:
+                continue
+            characters.append(character)
+            if len(characters) >= characters_to_fetch:
+                break
         page += 1
 
     return characters
-
 # Fetch all the anime characters
-all_characters = fetch_top_anime_characters()
+ignore_list = []
+if os.path.exists("ignore.txt"):
+    with open("ignore.txt", "r") as f:
+        ignore_list = [line.strip() for line in f]
+
+all_characters = fetch_top_anime_characters(ignore_list=ignore_list)
 
 # Select 2 random characters from the fetched list
 random_characters = random.sample(all_characters, 2)
