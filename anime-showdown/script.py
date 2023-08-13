@@ -2,13 +2,14 @@ import discord
 from discord.ext import commands
 import os
 import requests
+import json
 import random
 import asyncio
 from PIL import Image, ImageDraw, ImageFont
 from config import anime_channel_id, bot_token
 from discord.ext import commands
 
-characters_to_fetch = 50 # fetch the top 50 characters from the api
+characters_to_fetch = 100 # fetch the top 50 characters from the api
 voting_duration = 10800 # 10800s ~ 3 hours
 
 # Set up the Discord client
@@ -129,13 +130,37 @@ draw.text(vs_text_position, vs_text, font=font, fill=font_color, stroke_width=4,
 # Save the finalized image as showdown.jpg
 final_image.save("showdown.jpg")
 
+async def get_character_anime(character_id):
+    # Replace the placeholder with the provided character ID
+    url = "https://api.jikan.moe/v4/characters/{id}/anime".replace("{id}", str(character_id))    
+    
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        data = response.json()
+        return data["data"]
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching data: {e}")
+        return None
+
 # Define a function to send a Discord message with the details of the new anime showdown
 async def send_random_anime(channel, anime_list):
+    character1_anime = await get_character_anime(random_characters[0]["mal_id"])
     character1_name = random_characters[0]["name"]
     character1_bio = random_characters[0]["about"][:200] if len(random_characters[0]["about"]) <= 200 or random_characters[0]["about"][200] == ' ' else random_characters[1]["about"][:random_characters[0]["about"].rfind(' ', 0, 200)]
+    
+    character2_anime = await get_character_anime(random_characters[1]["mal_id"])
     character2_name = random_characters[1]["name"]
     character2_bio = random_characters[1]["about"][:200] if len(random_characters[1]["about"]) <= 200 or random_characters[1]["about"][200] == ' ' else random_characters[1]["about"][:random_characters[1]["about"].rfind(' ', 0, 200)]
-
+    
+    if character1_anime:
+        print("Character1 Anime Data:")
+        print(character1_anime[0]["anime"]["title"])
+        
+    if character2_anime:
+        print("Character1 Anime Data:")
+        print(character2_anime[0]["anime"]["title"])
+    
     # Load the image file
     with open('showdown.jpg', 'rb') as f:
         image = discord.File(f)
@@ -144,7 +169,7 @@ async def send_random_anime(channel, anime_list):
     message = await channel.send(file=image)
 
     # Send the text message
-    poll_message = await channel.send(f"🔥 Anime Showdown Alert! 🔥\n\nIntroducing **{character1_name}** and **{character2_name}**, two impressive contenders ready to demonstrate their skills! It's time to decide the ultimate champion, whether through their power, intellect, or simply personal preference! Who will prevail? \n\nChoose now and let your voice be heard! 💫 💪\n\nWho are you voting for?")
+    poll_message = await channel.send(f"🔥 Anime Showdown Alert! 🔥\n\n🔵 **{character1_name}** from {character1_anime[0]['anime']['title']} \n\nor \n\n🔴 **{character2_name}** from {character2_anime[0]['anime']['title']} \n\nIt's time to decide the ultimate champion, whether through their power, intellect, or maybe you just want to vote for your favorite! Who will prevail? \n\nChoose now and let your voice be heard! 💫 💪\n\nWho are you voting for?")
 
     # Add reactions to the poll message
     await poll_message.add_reaction("🔵")  # Blue circle emoji
