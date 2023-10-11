@@ -1,119 +1,120 @@
 {
     "consoles": [
-        {
-            "name": "Nintendo Entertainment System",
-            "release_date": "1985-10-18",
-            "fact": "36 years ago today, the **Nintendo Entertainment System** (NES) released in North America! Released on October 18, 1985, the NES revitalized the video game industry and introduced iconic franchises like Super Mario Bros."
-        },
-        {
-            "name": "Sega Master System",
-            "release_date": "1986-09-00",
-            "fact": "35 years ago today, the **Sega Master System** made its debut in North America! Released in September 1986, the Master System was Sega's first entry into the console market and competed with the NES."
-        },
-        {
-            "name": "Atari 7800",
-            "release_date": "1986-06-00",
-            "fact": "35 years ago today, the **Atari 7800** was released in North America! Released in June 1986, the 7800 aimed to revive Atari's gaming fortunes with backward compatibility and improved graphics."
-        },
-        {
-            "name": "Sega Genesis",
-            "release_date": "1989-08-14",
-            "fact": "32 years ago today, the **Sega Genesis** made its debut in North America! Released on August 14, 1989, the Genesis brought Sonic the Hedgehog into the gaming world, establishing Sega as a major player."
-        },
-        {
-            "name": "Super Nintendo Entertainment System",
-            "release_date": "1991-08-23",
-            "fact": "30 years ago today, the **Super Nintendo Entertainment System** (SNES) released in North America! Released on August 23, 1991, the SNES continued Nintendo's success with iconic franchises and advanced graphics."
-        },
-        {
-            "name": "Sega Saturn",
-            "release_date": "1995-05-11",
-            "fact": "27 years ago today, the **Sega Saturn** faced a surprise launch in North America! Released on May 11, 1995, the Saturn struggled in the market despite efforts to compete with the Sony PlayStation."
-        },
-        {
-            "name": "Sony PlayStation",
-            "release_date": "1995-09-09",
-            "fact": "27 years ago today, the **Sony PlayStation** revolutionized gaming in North America! Released on September 9, 1995, it introduced the CD format and a diverse range of titles, becoming a best-seller."
-        },
-        {
-            "name": "Nintendo 64",
-            "release_date": "1996-09-25",
-            "fact": "26 years ago today, the **Nintendo 64** made its debut in North America! Released on September 29, 1996, the N64 introduced 3D gaming and iconic titles like Super Mario 64 and The Legend of Zelda: Ocarina of Time."
-        },
-        {
-            "name": "Sega Dreamcast",
-            "release_date": "1999-09-09",
-            "fact": "22 years ago today, the **Sega Dreamcast** was a pioneer in North America! Released on September 9, 1999, it featured online capabilities but faced challenges leading to Sega's exit from the hardware market."
-        },
-        {
-            "name": "Sony PlayStation 2",
-            "release_date": "2000-10-26",
-            "fact": "21 years ago today, the **Sony PlayStation 2** became a legend in North America! Released on October 26, 2000, it is the best-selling console of all time, offering a vast library of games and DVD playback."
-        },
-        {
-            "name": "Microsoft Xbox",
-            "release_date": "2001-11-15",
-            "fact": "20 years ago today, the **Microsoft Xbox** marked its entry into North America! Released on November 15, 2001, it introduced the Halo franchise and Xbox Live."
-        },
-        {
-            "name": "Nintendo GameCube",
-            "release_date": "2001-11-18",
-            "fact": "20 years ago today, the Nintendo **GameCube** brought joy to North America! Released on November 18, 2001, it featured a compact design and introduced popular franchises like Super Smash Bros. Melee."
-        },
-        {
-            "name": "Sony PlayStation Portable",
-            "release_date": "2005-03-24",
-            "fact": "18 years ago today, the **Sony PlayStation Portable** (PSP) transformed portable gaming in North America! Released on March 24, 2005, it brought impressive graphics and multimedia capabilities."
-        },
-        {
-            "name": "Microsoft Xbox 360",
-            "release_date": "2005-11-22",
-            "fact": "17 years ago today, the **Microsoft Xbox 360** shaped the future of online gaming in North America! Released on November 22, 2005, it introduced HD gaming and Xbox Live."
-        },
-        {
-            "name": "Sony PlayStation 3",
-            "release_date": "2006-11-17",
-            "fact": "16 years ago today, the **Sony PlayStation 3** became a multimedia hub in North America! Released on November 17, 2006, it featured powerful hardware and Blu-ray support."
-        },
-        {
-            "name": "Nintendo Wii",
-            "release_date": "2006-11-19",
-            "fact": "16 years ago today, the **Nintendo Wii** transformed gaming in North America! Released on November 19, 2006, it popularized motion controls and expanded the gaming audience with titles like Wii Sports."
-        },
-        {
-            "name": "Sony PlayStation Vita",
-            "release_date": "2012-09-27",
-            "fact": "11 years ago today, the **Sony PlayStation Vita** amazed gamers in North America! Released on February 22, 2012, it was a portable powerhouse with a vibrant OLED screen and a diverse library of games."
-        },
-        {
-            "name": "Nintendo Wii U",
-            "release_date": "2012-11-18",
-            "fact": "10 years ago today, the **Nintendo Wii U** introduced unique gaming experiences in North America! Released on November 18, 2012, it featured the GamePad controller, paving the way for the Nintendo Switch."
-        },
-        {
-            "name": "Sony PlayStation 4",
-            "release_date": "2013-11-15",
-            "fact": "8 years ago today, the **Sony PlayStation 4** became a powerhouse in North America! Released on November 15, 2013, it featured a strong lineup of exclusive games."
-        },
-        {
-            "name": "Microsoft Xbox One",
-            "release_date": "2013-11-22",
-            "fact": "8 years ago today, the **Microsoft Xbox One** focused on multimedia integration in North America! Released on November 22, 2013, it introduced the Kinect sensor for enhanced user interaction."
-        },
-        {
-            "name": "Nintendo Switch",
-            "release_date": "2017-03-03",
-            "fact": "6 years ago today, the **Nintendo Switch** revolutionized gaming in North America! Released on March 3, 2017, it featured a hybrid design, allowing users to switch between handheld and home console modes."
-        },
-        {
-            "name": "Sony PlayStation 5",
-            "release_date": "2020-11-12",
-            "fact": "2 years ago today, the **Sony PlayStation 5** ushered in the ninth console generation in North America! Released on November 12, 2020, it featured powerful hardware and innovative features."
-        },
-        {
-            "name": "Microsoft Xbox Series X and Series S",
-            "release_date": "2020-11-10",
-            "fact": "2 years ago today, the **Microsoft Xbox Series X and Series S** brought cutting-edge technology to the Xbox family in North America! Released on November 10, 2020, it focused on backward compatibility."
-        }
+      {
+        "name": "Nintendo Entertainment System",
+        "release_date": "1985-10-18",
+        "fact": "**Nintendo Entertainment System** (NES) made its debut in North America! Released on October 18, 1985, the NES revitalized the video game industry and introduced iconic franchises like Super Mario Bros. It played a pivotal role in establishing home consoles as a mainstream form of entertainment. The NES also featured the memorable accessory, the Power Glove, adding an interactive dimension to gaming."
+      },
+      {
+        "name": "Sega Master System",
+        "release_date": "1986-09-20",
+        "fact": "**Sega Master System** made its debut in North America! Released in September 1986, the Master System was Sega's first entry into the console market and competed with the NES. Despite facing tough competition, it gained a dedicated fanbase and laid the foundation for Sega's future success. The Master System was known for its 3D glasses accessory, providing a unique gaming experience."
+      },
+      {
+        "name": "Atari 7800",
+        "release_date": "1986-06-15",
+        "fact": "**Atari 7800** was made its debut in North America! Released in June 1986, the 7800 aimed to revive Atari's gaming fortunes with backward compatibility and improved graphics. While it didn't achieve the same success as its predecessors, the 7800 holds a special place in gaming history as one of the last consoles from Atari."
+      },
+      {
+        "name": "Sega Genesis",
+        "release_date": "1989-08-14",
+        "fact": "**Sega Genesis** made its debut in North America! Released on August 14, 1989, the Genesis brought Sonic the Hedgehog into the gaming world, establishing Sega as a major player. Sonic's introduction marked the beginning of a mascot rivalry between Sega and Nintendo, known as the 'Console Wars.'"
+      },
+      {
+        "name": "Super Nintendo Entertainment System",
+        "release_date": "1991-08-23",
+        "fact": "**Super Nintendo Entertainment System** (SNES) became a legend in North America! Released on August 23, 1991, the SNES continued Nintendo's success with iconic franchises and advanced graphics. The SNES also introduced the concept of Mode 7 graphics, allowing for impressive pseudo-3D effects in games."
+      },
+      {
+        "name": "Sega Saturn",
+        "release_date": "1995-05-11",
+        "fact": "**Sega Saturn** faced a surprise launch in North America! Released on May 11, 1995, the Saturn struggled in the market despite efforts to compete with the Sony PlayStation. The surprise launch at E3 1995 caught retailers off guard, contributing to its challenges in gaining traction."
+      },
+      {
+        "name": "Sony PlayStation",
+        "release_date": "1995-12-09",
+        "fact": "**Sony PlayStation** revolutionized gaming in North America! Released on September 9, 1995, it introduced the CD format and a diverse range of titles, becoming a best-seller. The PlayStation's success was also driven by the iconic game Final Fantasy VII, which showcased the potential of cinematic storytelling in video games."
+      },
+      {
+        "name": "Nintendo 64",
+        "release_date": "1996-09-25",
+        "fact": "**Nintendo 64** made its debut in North America! Released on September 29, 1996, the N64 introduced 3D gaming and iconic titles like Super Mario 64 and The Legend of Zelda: Ocarina of Time. The N64's innovative controller with an analog stick set a new standard for precise in-game control."
+      },
+      {
+        "name": "Sega Dreamcast",
+        "release_date": "1999-09-09",
+        "fact": "**Sega Dreamcast** was a pioneer in North America! Released on September 9, 1999, it featured online capabilities but faced challenges leading to Sega's exit from the hardware market. The Dreamcast's online multiplayer functionality laid the groundwork for future online gaming experiences."
+      },
+      {
+        "name": "Sony PlayStation 2",
+        "release_date": "2000-10-26",
+        "fact": "**Sony PlayStation 2** became a legend in North America! Released on October 26, 2000, it is the best-selling console of all time, offering a vast library of games and DVD playback. The PS2's success was further fueled by the introduction of the DualShock 2 controller, enhancing gameplay immersion."
+      },
+      {
+        "name": "Microsoft Xbox",
+        "release_date": "2001-11-15",
+        "fact": "**Microsoft Xbox** marked its entry into North America! Released on November 15, 2001, it introduced the Halo franchise and Xbox Live. The Xbox also pioneered the concept of a built-in hard drive, enabling new possibilities for game storage and downloadable content."
+      },
+      {
+        "name": "Nintendo GameCube",
+        "release_date": "2001-11-18",
+        "fact": "Nintendo **GameCube** brought joy to North America! Released on November 18, 2001, it featured a compact design and introduced popular franchises like Super Smash Bros. Melee. The GameCube's unique mini-disc format, while limiting storage capacity, contributed to its distinctive design."
+      },
+      {
+        "name": "Sony PlayStation Portable",
+        "release_date": "2005-03-24",
+        "fact": "**Sony PlayStation Portable** (PSP) transformed portable gaming in North America! Released on March 24, 2005, it brought impressive graphics and multimedia capabilities. The PSP also became a platform for innovative titles, including the critically acclaimed game, 'Monster Hunter Freedom Unite.'"
+      },
+      {
+        "name": "Microsoft Xbox 360",
+        "release_date": "2005-11-22",
+        "fact": "**Microsoft Xbox 360** shaped the future of online gaming in North America! Released on November 22, 2005, it introduced HD gaming and Xbox Live. The Xbox 360's integrated Xbox Live service revolutionized online multiplayer gaming and digital content distribution."
+      },
+      {
+        "name": "Sony PlayStation 3",
+        "release_date": "2006-11-17",
+        "fact": "**Sony PlayStation 3** became a multimedia hub in North America! Released on November 17, 2006, it featured powerful hardware and Blu-ray support. The PS3's Cell Broadband Engine architecture also made it a versatile platform for scientific research and development."
+      },
+      {
+        "name": "Nintendo Wii",
+        "release_date": "2006-11-19",
+        "fact": "**Nintendo Wii** transformed gaming in North America! Released on November 19, 2006, it popularized motion controls and expanded the gaming audience with titles like Wii Sports. The Wii's motion-sensing technology provided a unique and accessible gaming experience for players of all ages."
+      },
+      {
+        "name": "Sony PlayStation Vita",
+        "release_date": "2012-12-17",
+        "fact": "**Sony PlayStation Vita** amazed gamers in North America! Released on February 22, 2012, it was a portable powerhouse with a vibrant OLED screen and a diverse library of games. The Vita's innovative rear touchpad added an extra dimension to gameplay, enhancing user interaction."
+      },
+      {
+        "name": "Nintendo Wii U",
+        "release_date": "2012-11-18",
+        "fact": "**Nintendo Wii U** introduced unique gaming experiences in North America! Released on November 18, 2012, it featured the GamePad controller, paving the way for the Nintendo Switch. The Wii U's GamePad allowed for asymmetrical gameplay, offering different perspectives to players in the same game."
+      },
+      {
+        "name": "Sony PlayStation 4",
+        "release_date": "2013-11-15",
+        "fact": "**Sony PlayStation 4** became a powerhouse in North America! Released on November 15, 2013, it featured a strong lineup of exclusive games. The PS4's Share button and social integration brought a new level of connectivity, enabling players to easily share their gaming experiences."
+      },
+      {
+        "name": "Microsoft Xbox One",
+        "release_date": "2013-11-22",
+        "fact": "**Microsoft Xbox One** focused on multimedia integration in North America! Released on November 22, 2013, it introduced the Kinect sensor for enhanced user interaction. The Xbox One's Kinect allowed for voice and gesture controls, expanding the ways players interacted with their consoles."
+      },
+      {
+        "name": "Nintendo Switch",
+        "release_date": "2017-03-03",
+        "fact": "**Nintendo Switch** revolutionized gaming in North America! Released on March 3, 2017, it featured a hybrid design, allowing users to switch between handheld and home console modes. The Switch's portability and versatility made it a groundbreaking console, attracting a wide range of players."
+      },
+      {
+        "name": "Sony PlayStation 5",
+        "release_date": "2020-11-12",
+        "fact": "**Sony PlayStation 5** ushered in the ninth console generation in North America! Released on November 12, 2020, it featured powerful hardware and innovative features. The PS5's DualSense controller introduced haptic feedback and adaptive triggers, enhancing tactile sensations in gaming."
+      },
+      {
+        "name": "Microsoft Xbox Series X and Series S",
+        "release_date": "2020-11-10",
+        "fact": "**Microsoft Xbox Series X and Series S** brought cutting-edge technology to the Xbox family in North America! Released on November 10, 2020, it focused on backward compatibility. The Series X and Series S continued the Xbox tradition of backward compatibility, allowing players to enjoy a vast library of games across generations."
+      }
     ]
-}
+  }
+  

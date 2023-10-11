@@ -38,6 +38,10 @@ async def check_console_release():
                 continue
 
             release_month_day = release_date.strftime('%m-%d')
+
+            # Calculate the number of years since release
+            years_since_release = (datetime.now() - release_date).days // 365
+
         except ValueError:
             # Handle invalid date format
             print(f"Invalid release_date format for {console['name']}: {console['release_date']}")
@@ -48,7 +52,7 @@ async def check_console_release():
             image_filename = f"images/{console['name'].lower()}.jpg"
 
             # Prepare the message content
-            message_content = f"{console['fact']}\n\nDo you have a favorite **{console['name']}** game?"
+            message_content = f"{years_since_release} years ago the {console['fact']}\n\nDo you have a favorite **{console['name']}** game?"
 
             # Get the channel using the defined channel_id
             channel = client.get_channel(channel_id)
