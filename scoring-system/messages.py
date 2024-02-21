@@ -17,7 +17,7 @@ async def on_reaction_received(reaction, user):
     print(f"{user.name} reacted with {reaction.emoji} to a message.")
 
     # Update the Users stats
-    await update_user(user.id, "reactions")
+    await update_user(user.id, "emoji_reactions")
     print(f"...")
 
 
